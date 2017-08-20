@@ -1,0 +1,45 @@
+// ==UserScript==
+// @name TorrentProject
+// @icon data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAmpJREFUeNpsU19IU2EU/92/c+nm3NIcUyxCNzH6t1YvmQ/LUKigJ6Fee6kZ9hgU9CC9RIGkDyK+RFQEOQKJRehD9ZSkhi+zERKF2wyW5trm/tzdzvd5t+byB797zzn3/M493/m+T1jXtEYAiQZJKsJA7zeIyQh0LQ8JOmRJhWx1I9PoPFF8qn7SSSNRGtP5BHJkMjQqoPfFISfm0Uv+ALGHuJ+YJ64SXxFHHF58f9MM3dCZWAGBif0rkDbDuE/Bm0SRddJQ2O5oXS71hixxyNqJiZdtmkC2mT3QF4OUWMADQ1xGj3+Mv9/NDqIKAcdxPH7epGXEywWPSmI3Ba9XZujUwxnlHKcuVuvxkDTOgN5lFzfTy6yLu0S1MsOeA7pxkJPZVagh3iGtKm98gULOkaOtdbjQtYDdMHg+ssOfXjqGz9HU6Y0w0mI2QRsFtC2u/kHw5zBPKP25hJKfRQ7B2C0sxlMs3JL9hS3BF4KAItJGW8hlgOFLkR0FGGYQxr2pQ1Bqy6Et2qt6UbFyp9yjagbe59/+t4yP2VClmGsUC2TR4eFOqHr61Thl6q/ejVB9OyRx2sFnMErMsGg+tb3mOfzAyRcSJ7PPohOFZFnMckdb7AP8TCP6DEnXFayRedHb4cS8zYbJGT/MJhoMTWZ2ZQTRtlbYpTnEf/MBBvZ68WG8bgn8KPNjS8fZ9xpX01k82mOCGbuD/XnIcgCTU26N+R5WwMwn+q+Ii8wbxH7iYeNblBgkju3rxtqTWo0dLbZ03oHLSGCdCLdxrelrdCJBF4tdZxul1dB1jlk6ULQ3t8vjyjIbZcEoIP8VYAAJeNn7YK7BNwAAAABJRU5ErkJggg==
+// @connect *://torrentproject.se/*
+// @trackerURL http://torrentproject.se/
+// @version 1.0
+// @require exKit
+// ==/UserScript==
+
+var code = {
+  "version": 2,
+  "type": "kit",
+  "title": "TorrentProject",
+  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAmpJREFUeNpsU19IU2EU/92/c+nm3NIcUyxCNzH6t1YvmQ/LUKigJ6Fee6kZ9hgU9CC9RIGkDyK+RFQEOQKJRehD9ZSkhi+zERKF2wyW5trm/tzdzvd5t+byB797zzn3/M493/m+T1jXtEYAiQZJKsJA7zeIyQh0LQ8JOmRJhWx1I9PoPFF8qn7SSSNRGtP5BHJkMjQqoPfFISfm0Uv+ALGHuJ+YJ64SXxFHHF58f9MM3dCZWAGBif0rkDbDuE/Bm0SRddJQ2O5oXS71hixxyNqJiZdtmkC2mT3QF4OUWMADQ1xGj3+Mv9/NDqIKAcdxPH7epGXEywWPSmI3Ba9XZujUwxnlHKcuVuvxkDTOgN5lFzfTy6yLu0S1MsOeA7pxkJPZVagh3iGtKm98gULOkaOtdbjQtYDdMHg+ssOfXjqGz9HU6Y0w0mI2QRsFtC2u/kHw5zBPKP25hJKfRQ7B2C0sxlMs3JL9hS3BF4KAItJGW8hlgOFLkR0FGGYQxr2pQ1Bqy6Et2qt6UbFyp9yjagbe59/+t4yP2VClmGsUC2TR4eFOqHr61Thl6q/ejVB9OyRx2sFnMErMsGg+tb3mOfzAyRcSJ7PPohOFZFnMckdb7AP8TCP6DEnXFayRedHb4cS8zYbJGT/MJhoMTWZ2ZQTRtlbYpTnEf/MBBvZ68WG8bgn8KPNjS8fZ9xpX01k82mOCGbuD/XnIcgCTU26N+R5WwMwn+q+Ii8wbxH7iYeNblBgkju3rxtqTWo0dLbZ03oHLSGCdCLdxrelrdCJBF4tdZxul1dB1jlk6ULQ3t8vjyjIbZcEoIP8VYAAJeNn7YK7BNwAAAABJRU5ErkJggg==",
+  "desc": "",
+  "downloadUrl": "",
+  "tVersion": "",
+  "search": {
+    "loginUrl": "",
+    "loginFormSelector": "",
+    "searchUrl": "http://torrentproject.se/?s=%search%",
+    "baseUrl": "http://torrentproject.se/",
+    "requestType": "GET",
+    "listItemSelector": "#ires>ol>li",
+    "torrentSelector": {
+      "categoryTitle": "div>div:eq(0)>span.bc.cate:eq(0)",
+      "title": "div>h3>a",
+      "url": {
+        "selector": "div>h3>a",
+        "attr": "href"
+      },
+      "size": "div>div:eq(0)>span.bc.torrent-size:eq(0)",
+      "seed": "div>div:eq(0)>span:eq(0)>span",
+      "peer": "div>div:eq(0)>span.bc.leechers:eq(0)>span"
+    },
+    "onGetValue": {
+      "size": [
+        "convertSize"
+      ]
+    }
+  },
+  "uid": 1789587214
+};
+
+API_exKit(code);

@@ -1,0 +1,60 @@
+// ==UserScript==
+// @name YourBittorrent
+// @icon data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABdElEQVQ4T61Ty27CMBAcv5IIBFRIvVDu9CfggsSZ/+FH2v4Qf8CpFKnXJlV4kzi2qzUNIpRTYSXL8nh3PJ7Vsm6363BDsLsSOOfAGKvoIYyixC9z/ii4LDhnu/ZAhcAncA44B0/k7G89qaI74fFzlVUCayBrDwhajyi2KRxjsNnek4ioDr36OhKffalCYK2FDAKE7Sc4o8GDulfDhECx3+AQf3oVJYFX0+l0XFEU4JxDSIndbgcpFVRUA5cK1hiACbhsA2vNqVhrDRUEYP1+343HY8xmM8TJN7gQMFpj8fEObQwCqSAlxyE3UFKAmrQ/5Og997CYz8GGw6GbTCaI4xibzRqCCwRhiO126xXpPAe91mg20Ww0PJ5lGaIowsvrG9hgMHCj0QjL5dK7myQJhBBot9v+nKYp8jyHUgqtVgvkUxSGWK3XmE6nRw8IpEVBXpRO005nWqVPREq5tEspceoCAWXhtdG4du+7cNdZ+M9Q3qzgBwctxh6kzP2YAAAAAElFTkSuQmCC
+// @downloadURL yourbittorrent.com
+// @connect *://yourbittorrent.com/*
+// @trackerURL https://yourbittorrent.com/
+// @version 1.0
+// @require exKit
+// ==/UserScript==
+
+var code = {
+  "version": 2,
+  "type": "kit",
+  "title": "YourBittorrent",
+  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABdElEQVQ4T61Ty27CMBAcv5IIBFRIvVDu9CfggsSZ/+FH2v4Qf8CpFKnXJlV4kzi2qzUNIpRTYSXL8nh3PJ7Vsm6363BDsLsSOOfAGKvoIYyixC9z/ii4LDhnu/ZAhcAncA44B0/k7G89qaI74fFzlVUCayBrDwhajyi2KRxjsNnek4ioDr36OhKffalCYK2FDAKE7Sc4o8GDulfDhECx3+AQf3oVJYFX0+l0XFEU4JxDSIndbgcpFVRUA5cK1hiACbhsA2vNqVhrDRUEYP1+343HY8xmM8TJN7gQMFpj8fEObQwCqSAlxyE3UFKAmrQ/5Og997CYz8GGw6GbTCaI4xibzRqCCwRhiO126xXpPAe91mg20Ww0PJ5lGaIowsvrG9hgMHCj0QjL5dK7myQJhBBot9v+nKYp8jyHUgqtVgvkUxSGWK3XmE6nRw8IpEVBXpRO005nWqVPREq5tEspceoCAWXhtdG4du+7cNdZ+M9Q3qzgBwctxh6kzP2YAAAAAElFTkSuQmCC",
+  "desc": "",
+  "downloadUrl": "yourbittorrent.com",
+  "tVersion": "",
+  "search": {
+    "loginUrl": "",
+    "loginFormSelector": "",
+    "searchUrl": "https://yourbittorrent.com/?q=%search% ",
+    "nextPageSelector": {
+      "selector": "#main>div>div:eq(0)>ul>li:eq(4)>a",
+      "attr": "href"
+    },
+    "baseUrl": "https://yourbittorrent.com/",
+    "requestType": "GET",
+    "listItemSelector": "#main>div>table>tbody>tr",
+    "torrentSelector": {
+      "title": ">td:eq(0)>div:eq(0)>a",
+      "url": {
+        "selector": ">td:eq(0)>div:eq(0)>a",
+        "attr": "href"
+      },
+      "size": ">td:eq(1)",
+      "downloadUrl": {
+        "selector": "",
+        "attr": "href"
+      },
+      "seed": ">td:eq(3)",
+      "peer": ">td:eq(4)",
+      "date": ">td:eq(2)"
+    },
+    "onGetValue": {
+      "size": [
+        "convertSize"
+      ],
+      "date": [
+        {
+          "name": "timeFormat",
+          "format": "1"
+        }
+      ]
+    }
+  },
+  "uid": 63915093
+};
+
+API_exKit(code);

@@ -1,0 +1,49 @@
+// ==UserScript==
+// @name Zooqle.com
+// @icon data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACtklEQVQ4T41Tz2sTQRR+MzuZDaGFEi+2VWwhFDSB3S0NhFI1Kv4CD3qwNylakeJBFET/AEXRk9YeJZbixepFRKhUtAd7KKTsLLaoIIIg+AsJre02zu7Mk4mJpMWDD4bhvW/me2/evI/AerMAgNRDGgDMapjBKABgPV7DGoc38Py/u47AcZxjlNIDhJCfUsrJhYWFcj0JGsyyrN0AsKq1nhZCzDQqMCToed5dy7KG4zieBIBtlmXl4zgeCoLgvuu6JcbYSa31Q0TcmkgkClLKC0KIW7UKXNft55zPRlFU8n1/2MR6e3s/IWKslBq2bft5FEX3hBCn6thHROSVSqW7QXA2mUyOrq2tnQmCYAIAlOd5jwDgMCKWOOcjUsoRIcS4wVzXfUApPS6l3FEjcBznRDKZnKhWq+eCILhTr+oZIWQAEa9yzq9JKc8LIW43MErpvuXl5a4aQU9PT2dra+sbrfW3MAx3Mca6U6nUqziOp7TWpxlj77XWX5VSA5RS059ppdSPlZWVjCGoNTGXy+23bXtMa90GABIAXkopLy0uLn7JZrN5zvkYpbQDERkAtCDi90ql8ucJzcOSy+U6UqnUHgDYnEgkHs/Ozr4rFAqDWuuMUmpqaWlpsaWl5QkhxPV9v7NGUCwWkwDQNTMz8zafz1/UWl+nlDKl1GdKaYCIh+pJBOf8iJTyJiFkb7lcrhGQTCbD0+l0CQDapZQme2TGlVJqE0IgiiIzvr8opUlK6QfGGFVKxfPz89v/9qCvry+HiFOI2Gku1W3ctu2n1Wp1lBDSbmJKqYgxFiqlvvu+n13Xg2Kx2La6unpUa51mjL2em5ubrj9xSxiGB7XWm2zbfhGG4RAiDgoh2psJar/xDxkZBTarEjzPuwIAl33fT238BeObC2ZvlrPxG3KOHcfpJ4TsFELc+A0VW0GxAvJIkgAAAABJRU5ErkJggg==
+// @connect *://zooqle.com/*
+// @trackerURL https://zooqle.com/
+// @version 1.0
+// @require exKit
+// ==/UserScript==
+
+var code = {
+  "version": 2,
+  "type": "kit",
+  "title": "Zooqle.com",
+  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACtklEQVQ4T41Tz2sTQRR+MzuZDaGFEi+2VWwhFDSB3S0NhFI1Kv4CD3qwNylakeJBFET/AEXRk9YeJZbixepFRKhUtAd7KKTsLLaoIIIg+AsJre02zu7Mk4mJpMWDD4bhvW/me2/evI/AerMAgNRDGgDMapjBKABgPV7DGoc38Py/u47AcZxjlNIDhJCfUsrJhYWFcj0JGsyyrN0AsKq1nhZCzDQqMCToed5dy7KG4zieBIBtlmXl4zgeCoLgvuu6JcbYSa31Q0TcmkgkClLKC0KIW7UKXNft55zPRlFU8n1/2MR6e3s/IWKslBq2bft5FEX3hBCn6thHROSVSqW7QXA2mUyOrq2tnQmCYAIAlOd5jwDgMCKWOOcjUsoRIcS4wVzXfUApPS6l3FEjcBznRDKZnKhWq+eCILhTr+oZIWQAEa9yzq9JKc8LIW43MErpvuXl5a4aQU9PT2dra+sbrfW3MAx3Mca6U6nUqziOp7TWpxlj77XWX5VSA5RS059ppdSPlZWVjCGoNTGXy+23bXtMa90GABIAXkopLy0uLn7JZrN5zvkYpbQDERkAtCDi90ql8ucJzcOSy+U6UqnUHgDYnEgkHs/Ozr4rFAqDWuuMUmpqaWlpsaWl5QkhxPV9v7NGUCwWkwDQNTMz8zafz1/UWl+nlDKl1GdKaYCIh+pJBOf8iJTyJiFkb7lcrhGQTCbD0+l0CQDapZQme2TGlVJqE0IgiiIzvr8opUlK6QfGGFVKxfPz89v/9qCvry+HiFOI2Gku1W3ctu2n1Wp1lBDSbmJKqYgxFiqlvvu+n13Xg2Kx2La6unpUa51mjL2em5ubrj9xSxiGB7XWm2zbfhGG4RAiDgoh2psJar/xDxkZBTarEjzPuwIAl33fT238BeObC2ZvlrPxG3KOHcfpJ4TsFELc+A0VW0GxAvJIkgAAAABJRU5ErkJggg==",
+  "desc": "",
+  "downloadUrl": "",
+  "tVersion": "",
+  "search": {
+    "loginUrl": "",
+    "loginFormSelector": "",
+    "searchUrl": "https://zooqle.com/search?q=%search% ",
+    "nextPageSelector": {
+      "selector": "div.panel.zq-panel.zq-small>div.panel-body>ul>li:eq(5)>a>span",
+      "attr": "href"
+    },
+    "baseUrl": "https://zooqle.com/",
+    "requestType": "GET",
+    "listItemSelector": "div.panel.zq-panel.zq-small>div.panel-body>table>tbody>",
+    "torrentSelector": {
+      "title": "td.text-trunc.text-nowrap>a",
+      "url": {
+        "selector": "td.text-trunc.text-nowrap>a",
+        "attr": "href"
+      },
+      "size": "td:eq(3)>div>div",
+      "seed": "td:eq(5)>div>div.progress-bar.smaller.prog-green.prog-l",
+      "peer": "td:eq(5)>div>div.progress-bar.smaller.prog-yellow.prog-r",
+      "date": "td.text-nowrap.text-muted.smaller"
+    },
+    "onGetValue": {
+      "size": [
+        "convertSize"
+      ]
+    }
+  },
+  "uid": 997410429
+};
+
+API_exKit(code);

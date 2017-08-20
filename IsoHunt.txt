@@ -1,0 +1,53 @@
+// ==UserScript==
+// @name IsoHunt.to
+// @icon data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACQ0lEQVQ4T53TXUgTUBQH8P8UXJIzknBKfhDJWlBYBlkS7mEUoatArRZzNoe1wbJyrpq6pU3QtFYGS5xuWailaYHFMHI0ESxWmB+kY0+KCI1o4crccOYJ9rD5UNi6D+fhcs7vnsO9l4H/WK5v32nFv4IkdhyDEW79wNAk5WvbwE2Ox5uWMoQNmPrfUonuIS6LstGkLAx14HJ76PGAHemcFPD3c/8K80oa6MP0HAwVYkiPHQgBxmc2ktc/Qb0iD+rio38EHDOfKae0CSxWDOrkAgh4e0OAtKaDul/b0auXgZOUiMIqI1IS4nBHJURy/OYAaBt1kODSfYgOZ6K1WhzYC4Svnh+Uf9GA6fkvGOvSYGx6BnkVZlRLBdDIcoPd1Db3k9ZsgV5VgPIzR0LAx6l54ituY8+OZPQ1yHG15QXMvTbERjMRy4oOXtTCohdenx8TXVrs4mwNAb1WO0ludKAoJxP3VEKINUb0WCeRuGUTIiMiAsCv1VW43B5kZ6TBoBRhN3cNUNdmocqWfjyokeBQ+nYUaUxwL/nwUq8ANzUhcJL1vZMk103YmcbGoEEVHIvhW/aTqLIdQxNOjBiVIEYEeOdugZvKxrD5WjCxuXuQLCNTqCo+gayMbSHAvbBIByV1YMVEoe/mBYw6ZlGgbsXZ3Cw80knWfWiBhKe2cfrknINOfpyhNTyn2vZXKBPycffK6X8D1v4HWWMnGXuG0aoW4fxJXvhAaWMnvRufRUP5KfD3ccIHfi55adlPiNoQiY1M5rrAb5Qb1+YW/VVCAAAAAElFTkSuQmCC
+// @connect *://isohunt.to/*
+// @trackerURL https://isohunt.to/
+// @version 1.0
+// @require exKit
+// ==/UserScript==
+
+var code = {
+  "version": 2,
+  "type": "kit",
+  "title": "IsoHunt.to",
+  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACQ0lEQVQ4T53TXUgTUBQH8P8UXJIzknBKfhDJWlBYBlkS7mEUoatArRZzNoe1wbJyrpq6pU3QtFYGS5xuWailaYHFMHI0ESxWmB+kY0+KCI1o4crccOYJ9rD5UNi6D+fhcs7vnsO9l4H/WK5v32nFv4IkdhyDEW79wNAk5WvbwE2Ox5uWMoQNmPrfUonuIS6LstGkLAx14HJ76PGAHemcFPD3c/8K80oa6MP0HAwVYkiPHQgBxmc2ktc/Qb0iD+rio38EHDOfKae0CSxWDOrkAgh4e0OAtKaDul/b0auXgZOUiMIqI1IS4nBHJURy/OYAaBt1kODSfYgOZ6K1WhzYC4Svnh+Uf9GA6fkvGOvSYGx6BnkVZlRLBdDIcoPd1Db3k9ZsgV5VgPIzR0LAx6l54ituY8+OZPQ1yHG15QXMvTbERjMRy4oOXtTCohdenx8TXVrs4mwNAb1WO0ludKAoJxP3VEKINUb0WCeRuGUTIiMiAsCv1VW43B5kZ6TBoBRhN3cNUNdmocqWfjyokeBQ+nYUaUxwL/nwUq8ANzUhcJL1vZMk103YmcbGoEEVHIvhW/aTqLIdQxNOjBiVIEYEeOdugZvKxrD5WjCxuXuQLCNTqCo+gayMbSHAvbBIByV1YMVEoe/mBYw6ZlGgbsXZ3Cw80knWfWiBhKe2cfrknINOfpyhNTyn2vZXKBPycffK6X8D1v4HWWMnGXuG0aoW4fxJXvhAaWMnvRufRUP5KfD3ccIHfi55adlPiNoQiY1M5rrAb5Qb1+YW/VVCAAAAAElFTkSuQmCC",
+  "desc": "",
+  "downloadUrl": "",
+  "tVersion": "",
+  "search": {
+    "loginUrl": "",
+    "loginFormSelector": "",
+    "searchUrl": "https://isohunt.to/torrents/?ihq=%search% ",
+    "nextPageSelector": {
+      "selector": "li.next>a",
+      "attr": "href"
+    },
+    "baseUrl": "https://isohunt.to/",
+    "requestType": "GET",
+    "listItemSelector": "table.table-torrents.table.table-striped.table-hover>tbody>tr",
+    "torrentSelector": {
+      "categoryTitle": ">td.title-row>em>small>a",
+      "categoryUrl": {
+        "selector": ">td.title-row>em>small>a",
+        "attr": "href"
+      },
+      "title": ">td.title-row>a",
+      "url": {
+        "selector": ">td.title-row>a",
+        "attr": "href"
+      },
+      "size": ">td.size-row",
+      "seed": ">td.sn",
+      "date": ">td.date-row"
+    },
+    "onGetValue": {
+      "size": [
+        "convertSize"
+      ]
+    }
+  },
+  "uid": 909705087
+};
+
+API_exKit(code);

@@ -1,0 +1,55 @@
+// ==UserScript==
+// @name TorLock
+// @icon data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACLElEQVQ4T6WTTUhUYRSGn3PnzpgMZT/Sj65EXUmtQqEfSi0X0SqaTUWWkZK7ggzvjPVVOE7QLoNI65oQRIMk7dRMF20qsCBqURS4CKRFtUltnJkT93rFSVrl2X3f4X3Pz/seYZUhq8RTSCA4bgd5a5RU8xvwc1pYQMEK3ipBLiCIhSCdw7nfh9r99Jx8iTE2xmQ9gAcUyK8k8/6WO+i4V0bYeogyTGT6dgFYvGpaQ4Ry9qCsYYEpmWRGwcsBiYEzoIeAd8BGVCrQ/BWSLVN+B/XUYeMAn4BfCNsRhmWEQaHTPUJIYmRn20m1//AJ4w9q0dw1IhUnNF1vazmu5Lgs47z2CRvZRIhelMdCwh1CrRt0N7+itTXMxzJl0mRtp78zG63+rOl9pZnN1rqi0XxKwfYIBLLaQC0hzgtd7lPmaSU6/Q1jlFjMghjFld+PzpVUlejQgW1zpZEPxfOZJ0z6qnjLFHazlSi9QtwdIKeDpFqeg7HA+Nu2nb6b2Wj1uKb3b8hssWqKRvLxQkW0iYMox4VLd3dhRxxUEyRPv8VM2GS+HEPkMOEdp3RwZ1ircEVJM8YjX5Em6hAcfnN9UYUudy95zvobhijKT8j0aLJtxgc0UI7NVZS1CAsoYZRb8owXHsGy4y7eqSZSPEt389d/WVybSHgyyygXgnECHxhjYRZnD2LJYL6Vg+3naOQcFutljKRCWGBh5TH9BVxiCxznjVLpOVEmeL+y0n8f5R81Ts7bgQ6VkgAAAABJRU5ErkJggg==
+// @connect *://www.torlock.com/*
+// @trackerURL https://www.torlock.com/
+// @version 1.0
+// @require exKit
+// ==/UserScript==
+
+var code = {
+  "version": 2,
+  "type": "kit",
+  "title": "TorLock",
+  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACLElEQVQ4T6WTTUhUYRSGn3PnzpgMZT/Sj65EXUmtQqEfSi0X0SqaTUWWkZK7ggzvjPVVOE7QLoNI65oQRIMk7dRMF20qsCBqURS4CKRFtUltnJkT93rFSVrl2X3f4X3Pz/seYZUhq8RTSCA4bgd5a5RU8xvwc1pYQMEK3ipBLiCIhSCdw7nfh9r99Jx8iTE2xmQ9gAcUyK8k8/6WO+i4V0bYeogyTGT6dgFYvGpaQ4Ry9qCsYYEpmWRGwcsBiYEzoIeAd8BGVCrQ/BWSLVN+B/XUYeMAn4BfCNsRhmWEQaHTPUJIYmRn20m1//AJ4w9q0dw1IhUnNF1vazmu5Lgs47z2CRvZRIhelMdCwh1CrRt0N7+itTXMxzJl0mRtp78zG63+rOl9pZnN1rqi0XxKwfYIBLLaQC0hzgtd7lPmaSU6/Q1jlFjMghjFld+PzpVUlejQgW1zpZEPxfOZJ0z6qnjLFHazlSi9QtwdIKeDpFqeg7HA+Nu2nb6b2Wj1uKb3b8hssWqKRvLxQkW0iYMox4VLd3dhRxxUEyRPv8VM2GS+HEPkMOEdp3RwZ1ircEVJM8YjX5Em6hAcfnN9UYUudy95zvobhijKT8j0aLJtxgc0UI7NVZS1CAsoYZRb8owXHsGy4y7eqSZSPEt389d/WVybSHgyyygXgnECHxhjYRZnD2LJYL6Vg+3naOQcFutljKRCWGBh5TH9BVxiCxznjVLpOVEmeL+y0n8f5R81Ts7bgQ6VkgAAAABJRU5ErkJggg==",
+  "desc": "",
+  "downloadUrl": "",
+  "tVersion": "",
+  "search": {
+    "loginUrl": "",
+    "loginFormSelector": "",
+    "searchUrl": "https://www.torlock.com/all/torrents/%search%.html",
+    "nextPageSelector": {
+      "selector": "div.col-md-8>nav>ul>li:eq(10)>a>span",
+      "attr": "href"
+    },
+    "baseUrl": "https://www.torlock.com/",
+    "requestType": "GET",
+    "listItemSelector": "div.panel.panel-default>table>tbody>tr",
+    "torrentSelector": {
+      "title": ">td:eq(0)>div>a",
+      "url": {
+        "selector": ">td:eq(0)>div>a",
+        "attr": "href"
+      },
+      "size": ">td:eq(2)",
+      "seed": ">td:eq(3)",
+      "peer": ">td:eq(4)",
+      "date": "td.td"
+    },
+    "onGetValue": {
+      "size": [
+        "convertSize"
+      ],
+      "date": [
+        {
+          "name": "timeFormat",
+          "format": "3"
+        }
+      ]
+    }
+  },
+  "uid": 509662378
+};
+
+API_exKit(code);
