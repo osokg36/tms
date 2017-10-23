@@ -3,7 +3,7 @@
 // @icon data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAChUlEQVQ4T01TPUhyYRg991raH1iCgzQ1XLeGhgpCsCAcAjfBqGgIAgnEWqLGGoRml3ARCopItKUQHW1IxEFbSqGhMfoxox/6ez/O43fv971wue/P85z3nPM8rzY6Oqo0TYM5urq6sLW1Bb/fj8/PT/BMKYXOzk7U63Wsrq7i8fHR2memsrIBzM/PI5lMoqOjwwoigMPhQDabxcLCAt7e3qwUTdd1YfD7+wuPx4NcLofh4WG5Xdf1f4Gahmq1iqWlJdRqNTkjsGaz2RQXX19fWF5exu7uLn5+fuR2kz7/3LPb7djZ2cHGxobM/8ZpFoODgwPMzs7K7aYEMuMwfTg+PkY4HBYGPLMkEG1/f188IABNM6XxjOuzszMUCgUcHh7i7u5OQASAk+/vb6EWj8dFjs1mEwDuM/ny8hIzMzNoNpvo7u7G/f19WybZmXRCoRBIkQCmhI+PDzw8PKBYLAq7QCCAm5sbKakw8Hg8ikFPT08YHBxEPp+H1+vFy8uLfKx5b28vXC6XVGhyclLKvL293Wa5tramhoaGcHt7i3K5LJUYGRnB+/s7enp6JHFgYECC+XHQq8XFxTaDsbEx5Xa7sbm5KZoYTCYMNo2kiVzTdf7n5uZEqsi8urpSe3t7ODk5kY2joyMYhiE+mM1ilpLnlEszz8/P2wC1Wk2dnp4ikUggEolgZWVFaPNWs/4EYOOQId33+Xy4vr5uSzAMQzUaDXkkrEKr1RL9U1NT6O/vlzJypNNpa24+KDGRfTA+Po5oNCoaM5kMJiYmEIvFZE0fSqUSgsEgnp+fpQdeX1+lMwVgenpasb6VSgUXFxdwOp3SaTSTMvgKU6kU1tfX0dfXJyz+fyd/AAITW2ynqgZNAAAAAElFTkSuQmCC
 // @connect *://bt-scene.cc/*
 // @trackerURL https://bt-scene.cc/
-// @version 1.0
+// @version 1.0.1
 // @require exKit
 // ==/UserScript==
 
@@ -13,8 +13,8 @@ var code = {
   "title": "BT-scene.cc",
   "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAChUlEQVQ4T01TPUhyYRg991raH1iCgzQ1XLeGhgpCsCAcAjfBqGgIAgnEWqLGGoRml3ARCopItKUQHW1IxEFbSqGhMfoxox/6ez/O43fv971wue/P85z3nPM8rzY6Oqo0TYM5urq6sLW1Bb/fj8/PT/BMKYXOzk7U63Wsrq7i8fHR2memsrIBzM/PI5lMoqOjwwoigMPhQDabxcLCAt7e3qwUTdd1YfD7+wuPx4NcLofh4WG5Xdf1f4Gahmq1iqWlJdRqNTkjsGaz2RQXX19fWF5exu7uLn5+fuR2kz7/3LPb7djZ2cHGxobM/8ZpFoODgwPMzs7K7aYEMuMwfTg+PkY4HBYGPLMkEG1/f188IABNM6XxjOuzszMUCgUcHh7i7u5OQASAk+/vb6EWj8dFjs1mEwDuM/ny8hIzMzNoNpvo7u7G/f19WybZmXRCoRBIkQCmhI+PDzw8PKBYLAq7QCCAm5sbKakw8Hg8ikFPT08YHBxEPp+H1+vFy8uLfKx5b28vXC6XVGhyclLKvL293Wa5tramhoaGcHt7i3K5LJUYGRnB+/s7enp6JHFgYECC+XHQq8XFxTaDsbEx5Xa7sbm5KZoYTCYMNo2kiVzTdf7n5uZEqsi8urpSe3t7ODk5kY2joyMYhiE+mM1ilpLnlEszz8/P2wC1Wk2dnp4ikUggEolgZWVFaPNWs/4EYOOQId33+Xy4vr5uSzAMQzUaDXkkrEKr1RL9U1NT6O/vlzJypNNpa24+KDGRfTA+Po5oNCoaM5kMJiYmEIvFZE0fSqUSgsEgnp+fpQdeX1+lMwVgenpasb6VSgUXFxdwOp3SaTSTMvgKU6kU1tfX0dfXJyz+fyd/AAITW2ynqgZNAAAAAElFTkSuQmCC",
   "desc": "",
-  "downloadUrl": "",
-  "tVersion": "",
+  "downloadUrl": "https://raw.githubusercontent.com/osokg36/tms/master/BT-Scene.txt",
+  "tVersion": "1.0.1",
   "search": {
     "loginUrl": "",
     "loginFormSelector": "",
