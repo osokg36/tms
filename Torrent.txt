@@ -1,55 +1,65 @@
 // ==UserScript==
-// @name Torrent.cd
+// @name Torent.cd
 // @icon data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADU0lEQVQ4Ty2TW2hcZRDHf985u9tN9pLs5tLEbM5m16Rlk5I22hotqLRUg1AprYqKICL4aMH45LvgS1GxUGmCD4oVQYq+6kNpk5impklspc1lc8HcmmyTzaXrnt1z+T45aWcYGPjP/P8zAyPc8pYChXQlPr8ffEFM5WIqic+1CaGj+/04ZgFN9yOUpFAqEgiHscwywrE2Fa5CD4bZ2skzMTLBysAw1q172EYLtaeeo6k9RfeRZ7Cs/1jY3eL+V1cwkga5VBxRLuVVQA8w/fcUdy730zY5QyTZROPZd1jq+46Gvi+5+tGnBI9laHAkK9lVGqri6C21VJ85gVCOrVaUy8gnn9EdDNP44bssnT9P7dm3Wbv2O7FYiMKSidbby8qDebTFVQq2Rs17p9icmUWU7bIa++EK6Tv/EMznWd/IYZ18mdLyOkGzzNO9H5P//AtKRoI/dEG0I8OhzsM4u0WMVAKx5Zjqwc+/8bD/e4rvv4U7O0N8fJzU6XPYA9dZ29llsuxi9TwPT9VhJDO0GgauvUuqtQtxf+RPdeObfpqXl0jXxoibRYLnzpAdHCbXdZicYRDy6RjdbWz8dR1ZruD1Nz/g5o1fqI7GEdO3BlR808S5eIn6yxcZ/PoSdmc70ZdeIBULs7i4wFJ+nWiimoDUyI3epb4uQjSi0Zw+ipi/fVP5xkbJ/vQrMx3tFDIH6DlxknRLkkJpm/GJu7S1p9l2dik6JUrLFkfbj1BdU4MQGqKYnVNXL1zgdkUAoy1DY3UN4ViE/TUxHGljNNWTSCSwrRK57Q3GRic4/dobIAQohVBKqdncKj9+20dzY5JYYwO1VRWYIYtjBzqIh6som0X2VdYxNHSNaDROZ2cXrusihEA4tqV0XWdwaJh7k9McbE3jVEoyBw0SsSRSamhCMjY+wcONPK++0oMCNCG8ARCO6yihBJqmMZmdYmF+jor9IZ5tO0RAD7G5vcNsdgpdUxw//iIosTe+pw7SI7CVkC6WtNh+tMPqyhrzc/9SfFTCtm32Bf2k0y2kUkn8AYhGqvDpQUDHe0Lhuu7eN3pRth10IdA1jWKpiFSSSGUEV0ocx8Xn9+1h4Kl7phBSSq97j0Noj4G93Z7UKO/SXq4E6ok/hrwbKP4H9LOB6+1VsJ0AAAAASUVORK5CYII=
+// @downloadURL https://raw.githubusercontent.com/osokg36/tms/master/Torrent.txt
 // @connect *://torrent.cd/*
 // @trackerURL https://torrent.cd/
-// @version 1.0
+// @version 1.0.1
 // @require exKit
 // ==/UserScript==
 
 var code = {
   "version": 2,
   "type": "kit",
-  "title": "Torrent.cd",
+  "title": "Torent.cd",
   "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADU0lEQVQ4Ty2TW2hcZRDHf985u9tN9pLs5tLEbM5m16Rlk5I22hotqLRUg1AprYqKICL4aMH45LvgS1GxUGmCD4oVQYq+6kNpk5impklspc1lc8HcmmyTzaXrnt1z+T45aWcYGPjP/P8zAyPc8pYChXQlPr8ffEFM5WIqic+1CaGj+/04ZgFN9yOUpFAqEgiHscwywrE2Fa5CD4bZ2skzMTLBysAw1q172EYLtaeeo6k9RfeRZ7Cs/1jY3eL+V1cwkga5VBxRLuVVQA8w/fcUdy730zY5QyTZROPZd1jq+46Gvi+5+tGnBI9laHAkK9lVGqri6C21VJ85gVCOrVaUy8gnn9EdDNP44bssnT9P7dm3Wbv2O7FYiMKSidbby8qDebTFVQq2Rs17p9icmUWU7bIa++EK6Tv/EMznWd/IYZ18mdLyOkGzzNO9H5P//AtKRoI/dEG0I8OhzsM4u0WMVAKx5Zjqwc+/8bD/e4rvv4U7O0N8fJzU6XPYA9dZ29llsuxi9TwPT9VhJDO0GgauvUuqtQtxf+RPdeObfpqXl0jXxoibRYLnzpAdHCbXdZicYRDy6RjdbWz8dR1ZruD1Nz/g5o1fqI7GEdO3BlR808S5eIn6yxcZ/PoSdmc70ZdeIBULs7i4wFJ+nWiimoDUyI3epb4uQjSi0Zw+ipi/fVP5xkbJ/vQrMx3tFDIH6DlxknRLkkJpm/GJu7S1p9l2dik6JUrLFkfbj1BdU4MQGqKYnVNXL1zgdkUAoy1DY3UN4ViE/TUxHGljNNWTSCSwrRK57Q3GRic4/dobIAQohVBKqdncKj9+20dzY5JYYwO1VRWYIYtjBzqIh6som0X2VdYxNHSNaDROZ2cXrusihEA4tqV0XWdwaJh7k9McbE3jVEoyBw0SsSRSamhCMjY+wcONPK++0oMCNCG8ARCO6yihBJqmMZmdYmF+jor9IZ5tO0RAD7G5vcNsdgpdUxw//iIosTe+pw7SI7CVkC6WtNh+tMPqyhrzc/9SfFTCtm32Bf2k0y2kUkn8AYhGqvDpQUDHe0Lhuu7eN3pRth10IdA1jWKpiFSSSGUEV0ocx8Xn9+1h4Kl7phBSSq97j0Noj4G93Z7UKO/SXq4E6ok/hrwbKP4H9LOB6+1VsJ0AAAAASUVORK5CYII=",
   "desc": "",
-  "downloadUrl": "",
-  "tVersion": "",
+  "downloadUrl": "https://raw.githubusercontent.com/osokg36/tms/master/Torrent.txt",
+  "tVersion": "1.0.1",
   "search": {
     "loginUrl": "",
     "loginFormSelector": "",
-    "searchUrl": "https://torrent.cd/torrents/search/?q=%search% &s_p_cat=0",
+    "searchUrl": "https://torrent.cd/torrents/search/?q=%search%",
     "nextPageSelector": {
       "selector": "#yw1>li.next>a",
       "attr": "href"
     },
     "baseUrl": "https://torrent.cd/",
     "requestType": "GET",
-    "listItemSelector": "#center>table:eq(1)>tbody>",
+    "listItemSelector": "#center>table:eq(1)>tbody>tr",
     "listItemSplice": [
       1,
       0
     ],
     "torrentSelector": {
-      "title": "td.desc>div:eq(1)>a",
+      "categoryTitle": "td:eq(6)",
+      "categoryUrl": {
+        "selector": "td:eq(6)",
+        "attr": "href"
+      },
+      "title": ">td.desc>div:eq(1)>a",
       "url": {
         "selector": "td.desc>div:eq(1)>a",
         "attr": "href"
       },
       "size": "td:eq(3)",
       "seed": "td:eq(4)",
-      "peer": "td:eq(5)"
+      "peer": "td:eq(5)",
+      "date": "td:eq(0)"
     },
     "onGetValue": {
       "size": [
         "convertSize"
       ],
       "date": [
-        "replaceToday"
+        {
+          "name": "timeFormat",
+          "format": "1"
+        }
       ]
     }
   },
-  "uid": 997410429
+  "uid": 1175639634
 };
 
 API_exKit(code);
