@@ -1,0 +1,57 @@
+// ==UserScript==
+// @name 1337x
+// @icon data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACJklEQVQ4T6WTz0tUURTHv/fH++GY5hRYiQ2aDhhlrSWNZqFUBKHTIl20bNk2iKTRTREE/QGBCxMKC5xq086YlJYVRuU0TvZkJjCTQZvevPfuPfGCpEFzkXd3uef7Oed8zz0MOzxsh3psAJzBjqRV1zBMTJAGDH+9NBabmLsTJlgaOp6w9u2/ScKwwbkdFD8/ahp/ez182wAsJmOHhFmfFpHIUWIcFPh5/WOtp/nIfLG41PXQ2B29AC5AgafdL/lk7PH8VBUgvOT7W07X1EenIA0rDPbXS1d85b+JNB58zk3LZkLCW10eaWp+NcpS0JsABLDCxcMTzI4MEueA1g64WBW1dce4aSNwy++80tfelvvvi3+822Sic765k+2KTsMw90jTBgkJbtlhS8FPJ3u5Ne2M/W38llNYTLbfMhv2XmXSADNN6PI6Ks7CTN77dioxjWBbAKXAC9nOcV5TO6QrLmjtO1RpBcr3Pirm98QzWN4WsNDX2Csj9jNyyya5ZUApcMMAEUFrGm19Ub7xT0D2DCzTjTzRSvWFvWngNQMrcCHO/hYROZ6nEvHZSm5LE3MnzAEh5SQYeJgxUMElKMwJU2Y4UAvOEfj+7bYD3jU2CVU1xk9daCdhPTWk6AjFRPRBkXuyPYOVXLc1KaUY0FqDANKB7o/PeukqQJidG3IYRGGthg7oXttM5W4YlOu2znHBUppISCFtz/cfxF96I5s+0v8s1o638Rf7lukRUTe6EgAAAABJRU5ErkJggg==
+// @downloadURL https://raw.githubusercontent.com/osokg36/tms/master/1337x.txt
+// @connect *://1337x.to/*
+// @trackerURL http://1337x.to/
+// @version 1.0.1
+// @require exKit
+// ==/UserScript==
+
+var code = {
+  "version": 2,
+  "type": "kit",
+  "title": "1337x",
+  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACJklEQVQ4T6WTz0tUURTHv/fH++GY5hRYiQ2aDhhlrSWNZqFUBKHTIl20bNk2iKTRTREE/QGBCxMKC5xq086YlJYVRuU0TvZkJjCTQZvevPfuPfGCpEFzkXd3uef7Oed8zz0MOzxsh3psAJzBjqRV1zBMTJAGDH+9NBabmLsTJlgaOp6w9u2/ScKwwbkdFD8/ahp/ez182wAsJmOHhFmfFpHIUWIcFPh5/WOtp/nIfLG41PXQ2B29AC5AgafdL/lk7PH8VBUgvOT7W07X1EenIA0rDPbXS1d85b+JNB58zk3LZkLCW10eaWp+NcpS0JsABLDCxcMTzI4MEueA1g64WBW1dce4aSNwy++80tfelvvvi3+822Sic765k+2KTsMw90jTBgkJbtlhS8FPJ3u5Ne2M/W38llNYTLbfMhv2XmXSADNN6PI6Ks7CTN77dioxjWBbAKXAC9nOcV5TO6QrLmjtO1RpBcr3Pirm98QzWN4WsNDX2Csj9jNyyya5ZUApcMMAEUFrGm19Ub7xT0D2DCzTjTzRSvWFvWngNQMrcCHO/hYROZ6nEvHZSm5LE3MnzAEh5SQYeJgxUMElKMwJU2Y4UAvOEfj+7bYD3jU2CVU1xk9daCdhPTWk6AjFRPRBkXuyPYOVXLc1KaUY0FqDANKB7o/PeukqQJidG3IYRGGthg7oXttM5W4YlOu2znHBUppISCFtz/cfxF96I5s+0v8s1o638Rf7lukRUTe6EgAAAABJRU5ErkJggg==",
+  "desc": "",
+  "downloadUrl": "https://raw.githubusercontent.com/osokg36/tms/master/1337x.txt",
+  "tVersion": "1.0.1",
+  "search": {
+    "loginUrl": "",
+    "loginFormSelector": "",
+    "searchUrl": "http://1337x.to/search/%search%/1/",
+    "nextPageSelector": {
+      "selector": "div.pagination>ul>li:eq(7)>a",
+      "attr": "href"
+    },
+    "baseUrl": "http://1337x.to/",
+    "requestType": "GET",
+    "listItemSelector": "table.table-list.table.table-responsive.table-striped>tbody>tr",
+    "torrentSelector": {
+      "title": ">td.coll-1.name",
+      "url": {
+        "selector": ">td.coll-1.name>a:eq(1)",
+        "attr": "href"
+      },
+      "size": "td:eq(4)",
+      "seed": "td:eq(1)",
+      "peer": "td:eq(2)",
+      "date": "td:eq(3)"
+    },
+    "onGetValue": {
+      "size": [
+        "convertSize"
+      ],
+      "date": [
+        "replaceMonth",
+        {
+          "name": "timeFormat",
+          "format": "3"
+        }
+      ]
+    }
+  },
+  "uid": 1453884837
+};
+
+API_exKit(code);
