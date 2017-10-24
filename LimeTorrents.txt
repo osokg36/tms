@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name LimeTorrents
 // @icon data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwwAADsMBx2+oZAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAAB3UlEQVQ4T43Oy28ScRAH8N//06uJp149ajy0xsaLBw82mtTUVBMTEw40NRSkBaQ8CqUgWBusVq2JfWzZpRXLY5GF3aWUx26hCvuSpVsep/5ga+NFMPlkkpnMdzIAJUwDhYh5JGnYSeq38VkQzpgHChHG3ZQB+aGHwB5p6e8iQLyEGQjsU9b+sIwJTc+F0kYYg0Aku9DHN9oaJk1hch4j57BMF8BLCyXe0yVcYIUAJ3+v1lFW8DGCp2epV5cxahYg5DSneMWWG6q3g43Oltz+1OhsnnYQuf35tLMptz9Kre5CQbDtpLXg4MgWLWrFpvd3651wtlhTdJxilJp+senjFUuvNcG23vrwlZiKHL6CL7nXYg+LgrUsP1bVFHOl8awsT/Fnzj/DJ3FGG4yOxwp2kGQ80YLdsXsjW9UdiXdz4thJQwcrdCxr8tK9vDSeYF9Ytq7FCo540QlSx8vQXs6g/zK8TT3PcTNFSUPzYzR/55B/lOOc7xMTuo2rkbw5ybhwxgXSFZ8qXrLbkevT61dc6O1g7MHqwX0bclOzNrSEjeKMM1X2qEDmxP+3BOtYxydd6Igbu7WReoqzi5cXiYoXAtSvwL/5SdXP15cAXX0zSIBS9U6AbO3t/1mhodrKOaR8RDUD8i5zAAAAAElFTkSuQmCC
+// @downloadURL https://raw.githubusercontent.com/osokg36/tms/master/LimeTorrents.txt
 // @connect *://www.limetorrents.cc/*
 // @trackerURL https://www.limetorrents.cc/
-// @version 1.0
+// @version 1.0.1
 // @require exKit
 // ==/UserScript==
 
@@ -11,14 +12,18 @@ var code = {
   "version": 2,
   "type": "kit",
   "title": "LimeTorrents",
-  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwwAADsMBx2+oZAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTFH80I3AAAB3UlEQVQ4T43Oy28ScRAH8N//06uJp149ajy0xsaLBw82mtTUVBMTEw40NRSkBaQ8CqUgWBusVq2JfWzZpRXLY5GF3aWUx26hCvuSpVsep/5ga+NFMPlkkpnMdzIAJUwDhYh5JGnYSeq38VkQzpgHChHG3ZQB+aGHwB5p6e8iQLyEGQjsU9b+sIwJTc+F0kYYg0Aku9DHN9oaJk1hch4j57BMF8BLCyXe0yVcYIUAJ3+v1lFW8DGCp2epV5cxahYg5DSneMWWG6q3g43Oltz+1OhsnnYQuf35tLMptz9Kre5CQbDtpLXg4MgWLWrFpvd3651wtlhTdJxilJp+senjFUuvNcG23vrwlZiKHL6CL7nXYg+LgrUsP1bVFHOl8awsT/Fnzj/DJ3FGG4yOxwp2kGQ80YLdsXsjW9UdiXdz4thJQwcrdCxr8tK9vDSeYF9Ytq7FCo540QlSx8vQXs6g/zK8TT3PcTNFSUPzYzR/55B/lOOc7xMTuo2rkbw5ybhwxgXSFZ8qXrLbkevT61dc6O1g7MHqwX0bclOzNrSEjeKMM1X2qEDmxP+3BOtYxydd6Igbu7WReoqzi5cXiYoXAtSvwL/5SdXP15cAXX0zSIBS9U6AbO3t/1mhodrKOaR8RDUD8i5zAAAAAElFTkSuQmCC",
+  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABdElEQVQ4T61Ty27CMBAcv5IIBFRIvVDu9CfggsSZ/+FH2v4Qf8CpFKnXJlV4kzi2qzUNIpRTYSXL8nh3PJ7Vsm6363BDsLsSOOfAGKvoIYyixC9z/ii4LDhnu/ZAhcAncA44B0/k7G89qaI74fFzlVUCayBrDwhajyi2KRxjsNnek4ioDr36OhKffalCYK2FDAKE7Sc4o8GDulfDhECx3+AQf3oVJYFX0+l0XFEU4JxDSIndbgcpFVRUA5cK1hiACbhsA2vNqVhrDRUEYP1+343HY8xmM8TJN7gQMFpj8fEObQwCqSAlxyE3UFKAmrQ/5Og997CYz8GGw6GbTCaI4xibzRqCCwRhiO126xXpPAe91mg20Ww0PJ5lGaIowsvrG9hgMHCj0QjL5dK7myQJhBBot9v+nKYp8jyHUgqtVgvkUxSGWK3XmE6nRw8IpEVBXpRO005nWqVPREq5tEspceoCAWXhtdG4du+7cNdZ+M9Q3qzgBwctxh6kzP2YAAAAAElFTkSuQmCC",
   "desc": "",
-  "downloadUrl": "",
-  "tVersion": "",
+  "downloadUrl": "https://raw.githubusercontent.com/osokg36/tms/master/LimeTorrents.txt",
+  "tVersion": "1.0.1",
   "search": {
     "loginUrl": "",
     "loginFormSelector": "",
     "searchUrl": "https://www.limetorrents.cc/search/all/%search%/",
+    "nextPageSelector": {
+      "selector": "#next",
+      "attr": "href"
+    },
     "baseUrl": "https://www.limetorrents.cc/",
     "requestType": "GET",
     "listItemSelector": "table.table2>tbody>tr",
@@ -27,17 +32,12 @@ var code = {
       0
     ],
     "torrentSelector": {
-      "categoryTitle": "td.tdnormal:eq(0)",
-      "title": "td.tdleft>div.tt-name>a:eq(1)",
+      "title": ">td.tdleft>div.tt-name>a:eq(1)",
       "url": {
-        "selector": "td.tdleft>div.tt-name>a:eq(1)",
+        "selector": ">td.tdleft>div.tt-name>a:eq(1)",
         "attr": "href"
       },
-      "size": "td.tdnormal:eq(1)",
-      "downloadUrl": {
-        "selector": "td.tdleft>div.tt-name>a:eq(0)",
-        "attr": "href"
-      },
+      "size": "td:eq(2)",
       "seed": "td.tdseed",
       "peer": "td.tdleech"
     },
@@ -47,7 +47,7 @@ var code = {
       ]
     }
   },
-  "uid": 1638027109
+  "uid": 727496154
 };
 
 API_exKit(code);
