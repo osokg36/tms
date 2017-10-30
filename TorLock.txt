@@ -1,115 +1,56 @@
-Auto update
-Add code Save Close
-
-1
 // ==UserScript==
-2
 // @name TorLock
-3
 // @icon data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACLElEQVQ4T6WTTUhUYRSGn3PnzpgMZT/Sj65EXUmtQqEfSi0X0SqaTUWWkZK7ggzvjPVVOE7QLoNI65oQRIMk7dRMF20qsCBqURS4CKRFtUltnJkT93rFSVrl2X3f4X3Pz/seYZUhq8RTSCA4bgd5a5RU8xvwc1pYQMEK3ipBLiCIhSCdw7nfh9r99Jx8iTE2xmQ9gAcUyK8k8/6WO+i4V0bYeogyTGT6dgFYvGpaQ4Ry9qCsYYEpmWRGwcsBiYEzoIeAd8BGVCrQ/BWSLVN+B/XUYeMAn4BfCNsRhmWEQaHTPUJIYmRn20m1//AJ4w9q0dw1IhUnNF1vazmu5Lgs47z2CRvZRIhelMdCwh1CrRt0N7+itTXMxzJl0mRtp78zG63+rOl9pZnN1rqi0XxKwfYIBLLaQC0hzgtd7lPmaSU6/Q1jlFjMghjFld+PzpVUlejQgW1zpZEPxfOZJ0z6qnjLFHazlSi9QtwdIKeDpFqeg7HA+Nu2nb6b2Wj1uKb3b8hssWqKRvLxQkW0iYMox4VLd3dhRxxUEyRPv8VM2GS+HEPkMOEdp3RwZ1ircEVJM8YjX5Em6hAcfnN9UYUudy95zvobhijKT8j0aLJtxgc0UI7NVZS1CAsoYZRb8owXHsGy4y7eqSZSPEt389d/WVybSHgyyygXgnECHxhjYRZnD2LJYL6Vg+3naOQcFutljKRCWGBh5TH9BVxiCxznjVLpOVEmeL+y0n8f5R81Ts7bgQ6VkgAAAABJRU5ErkJggg==
-4
 // @downloadURL https://raw.githubusercontent.com/osokg36/tms/master/TorLock.txt
-5
 // @connect *://www.torlock.com/*
-6
 // @trackerURL https://www.torlock.com/
-7
 // @version 1.0.1
-8
 // @require exKit
-9
 // ==/UserScript==
-10
-​
-11
+
 var code = {
-12
   "version": 2,
-13
   "type": "kit",
-14
   "title": "TorLock",
-15
   "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACLElEQVQ4T6WTTUhUYRSGn3PnzpgMZT/Sj65EXUmtQqEfSi0X0SqaTUWWkZK7ggzvjPVVOE7QLoNI65oQRIMk7dRMF20qsCBqURS4CKRFtUltnJkT93rFSVrl2X3f4X3Pz/seYZUhq8RTSCA4bgd5a5RU8xvwc1pYQMEK3ipBLiCIhSCdw7nfh9r99Jx8iTE2xmQ9gAcUyK8k8/6WO+i4V0bYeogyTGT6dgFYvGpaQ4Ry9qCsYYEpmWRGwcsBiYEzoIeAd8BGVCrQ/BWSLVN+B/XUYeMAn4BfCNsRhmWEQaHTPUJIYmRn20m1//AJ4w9q0dw1IhUnNF1vazmu5Lgs47z2CRvZRIhelMdCwh1CrRt0N7+itTXMxzJl0mRtp78zG63+rOl9pZnN1rqi0XxKwfYIBLLaQC0hzgtd7lPmaSU6/Q1jlFjMghjFld+PzpVUlejQgW1zpZEPxfOZJ0z6qnjLFHazlSi9QtwdIKeDpFqeg7HA+Nu2nb6b2Wj1uKb3b8hssWqKRvLxQkW0iYMox4VLd3dhRxxUEyRPv8VM2GS+HEPkMOEdp3RwZ1ircEVJM8YjX5Em6hAcfnN9UYUudy95zvobhijKT8j0aLJtxgc0UI7NVZS1CAsoYZRb8owXHsGy4y7eqSZSPEt389d/WVybSHgyyygXgnECHxhjYRZnD2LJYL6Vg+3naOQcFutljKRCWGBh5TH9BVxiCxznjVLpOVEmeL+y0n8f5R81Ts7bgQ6VkgAAAABJRU5ErkJggg==",
-16
   "desc": "",
-17
   "downloadUrl": "https://raw.githubusercontent.com/osokg36/tms/master/TorLock.txt",
-18
   "tVersion": "1.0.1",
-19
   "search": {
-20
     "loginUrl": "",
-21
     "loginFormSelector": "",
-22
     "searchUrl": "https://www.torlock.com/all/torrents/%search%.html",
-23
     "nextPageSelector": {
-24
       "selector": "div.col-md-8>nav>ul>li:eq(10)>a",
-25
       "attr": "href"
-26
     },
-27
     "baseUrl": "https://www.torlock.com/",
-28
     "requestType": "GET",
-29
     "listItemSelector": "div.panel.panel-default>table>tbody>tr",
-30
     "torrentSelector": {
-31
       "title": "td:eq(0)>div:eq(0)>a",
-32
       "url": {
-33
         "selector": "td:eq(0)>div:eq(0)>a",
-34
         "attr": "href"
-35
       },
-36
       "size": "td.ts",
-37
       "seed": "td.tul",
-38
       "peer": "td.tdl",
-39
       "date": "td.td"
-40
     },
-41
     "onGetValue": {
-42
       "size": [
-43
         "convertSize"
-44
       ],
-45
       "date": [
-46
         {
-47
           "name": "timeFormat",
-48
           "format": "3"
-49
         }
-50
       ]
-51
     }
-52
   },
-53
   "uid": 1058287753
-54
 };
-55
-​
-56
+
 API_exKit(code);
