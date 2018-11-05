@@ -4,7 +4,7 @@
 // @downloadURL https://raw.githubusercontent.com/osokg36/tms/master/TorrentDownloads.txt
 // @connect *://www.torrentdownloads.me/*
 // @trackerURL http://www.torrentdownloads.me/
-// @version 1.0.1
+// @version 1.0.2
 // @require exKit
 // ==/UserScript==
 
