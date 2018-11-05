@@ -1,0 +1,58 @@
+// ==UserScript==
+// @name KickAssTorrents
+// @icon data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADh0lEQVQ4T03SW0xbdRwH8O/v/z/ltD2FthQKtMABi0w7LoE6xZnI4uYQk8VkC0vMfJhGl/iixkj0QZPtfWb64JPRh2l0Zi+LPpig4mVCnMmi0VDYuAkdpUBber+cnnP+5nTR8Hv5Pf0++d0I94MuvnXysM/n+2grnr5uonqDTNntUuQXXYr9SLGkfZdKZq45ZbNqMPurHrdrvFYtvPDe5Zl1sqrfvhBxu/1dnw8dCj4JIjObK5UlzrjTKSs2G5MMw9TKlVqZEwlZtilEqM39vvLhRjR+uQ68+9rTD44M98zYG6SgIDAICBAjSZKJS5xMUwi9VhEQprC6NU3T+GczvVrJZI7RFMA7Xx5/c/yJ/ncA8jAGIsbhVHzoDI2huTWEQjaBtaUfUchu3x9YwDLTiwtbx2hysk8eULu+eiyiniBiDrujkdzebnJ5Agioo3AoXqQSdxBbvYVMehO6VhSmEIIzFGbn775B58/32DtcodnBcPuIxLnsblap7/BxeFpUKK4WMMZRLu4jl93GxvIcErG/YNQ0kzjKP8+tXqkD7U51NvxQ2whnTHa6WinYM4rO3gi8LSp0XUN6dxX53B7iG38gmbgLYegmMZRv/rZ+hSYnIfd3PP7l8ED7BCNu59zGPL4uHBqeQHvnAPLZHSz//T32kxsolzKoaQVrxRZQnL+1+bp1BemVc5HpI0OBaUbURATW6AnQ0KOn0RYMYy+xjIXb3yCT2oRh6ACsDcDQdT0dXdp9xgLopanBseFw+zWbjQcYEXf7ghgZO0v+zjBSO2tYW7yJfDaBXCYutErJAvSdZGFpdys9Uf+D508FWnq7u7/wNytHOSdHo9dPg488R739R0GMIZOMIbmzJhb//BbZ9LZpmGZ+eW3/09h67GIdiERgG+0bPBtS3ZdsNtYl2xVJDUXo4ZFJ8viCyO0nxEr0F6xEfxWlYkbL5qt34on8hU+uR2/XAStOT6gdgbamS0G/ckqSuM+huHlzq0oOZxMKuST2U3FRKedrVU2/t5UovF9M7l39bGan+D8AgE89+0DY73NM+332pxpsvIUzmwRGJEzD1HWjVq0Z91Lp0sex7crVr39Y37V+8iBgNcLPnOhWvV75TLPHfk5xNvRKEnhNF+VUtrpYLmgfJJN7szd+ymTrD21d4L8RDmQ6OdTmdAdlVQDHObEQyJwzqTgfXU/tLSxAO1jzL/yZhW933qMVAAAAAElFTkSuQmCC
+// @downloadURL https://raw.githubusercontent.com/osokg36/tms/master/KickAssTorrents.txt
+// @connect *://kat.sx/*
+// @trackerURL https://kat.sx/
+// @version 1.0.1
+// @require exKit
+// ==/UserScript==
+
+var code = {
+  "version": 2,
+  "type": "kit",
+  "title": "KickAssTorrents",
+  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADh0lEQVQ4T03SW0xbdRwH8O/v/z/ltD2FthQKtMABi0w7LoE6xZnI4uYQk8VkC0vMfJhGl/iixkj0QZPtfWb64JPRh2l0Zi+LPpig4mVCnMmi0VDYuAkdpUBber+cnnP+5nTR8Hv5Pf0++d0I94MuvnXysM/n+2grnr5uonqDTNntUuQXXYr9SLGkfZdKZq45ZbNqMPurHrdrvFYtvPDe5Zl1sqrfvhBxu/1dnw8dCj4JIjObK5UlzrjTKSs2G5MMw9TKlVqZEwlZtilEqM39vvLhRjR+uQ68+9rTD44M98zYG6SgIDAICBAjSZKJS5xMUwi9VhEQprC6NU3T+GczvVrJZI7RFMA7Xx5/c/yJ/ncA8jAGIsbhVHzoDI2huTWEQjaBtaUfUchu3x9YwDLTiwtbx2hysk8eULu+eiyiniBiDrujkdzebnJ5Agioo3AoXqQSdxBbvYVMehO6VhSmEIIzFGbn775B58/32DtcodnBcPuIxLnsblap7/BxeFpUKK4WMMZRLu4jl93GxvIcErG/YNQ0kzjKP8+tXqkD7U51NvxQ2whnTHa6WinYM4rO3gi8LSp0XUN6dxX53B7iG38gmbgLYegmMZRv/rZ+hSYnIfd3PP7l8ED7BCNu59zGPL4uHBqeQHvnAPLZHSz//T32kxsolzKoaQVrxRZQnL+1+bp1BemVc5HpI0OBaUbURATW6AnQ0KOn0RYMYy+xjIXb3yCT2oRh6ACsDcDQdT0dXdp9xgLopanBseFw+zWbjQcYEXf7ghgZO0v+zjBSO2tYW7yJfDaBXCYutErJAvSdZGFpdys9Uf+D508FWnq7u7/wNytHOSdHo9dPg488R739R0GMIZOMIbmzJhb//BbZ9LZpmGZ+eW3/09h67GIdiERgG+0bPBtS3ZdsNtYl2xVJDUXo4ZFJ8viCyO0nxEr0F6xEfxWlYkbL5qt34on8hU+uR2/XAStOT6gdgbamS0G/ckqSuM+huHlzq0oOZxMKuST2U3FRKedrVU2/t5UovF9M7l39bGan+D8AgE89+0DY73NM+332pxpsvIUzmwRGJEzD1HWjVq0Z91Lp0sex7crVr39Y37V+8iBgNcLPnOhWvV75TLPHfk5xNvRKEnhNF+VUtrpYLmgfJJN7szd+ymTrD21d4L8RDmQ6OdTmdAdlVQDHObEQyJwzqTgfXU/tLSxAO1jzL/yZhW933qMVAAAAAElFTkSuQmCC",
+  "desc": "",
+  "downloadUrl": "https://raw.githubusercontent.com/osokg36/tms/master/KickAssTorrents.txt",
+  "tVersion": "1.0.1",
+  "search": {
+    "loginUrl": "",
+    "loginFormSelector": "",
+    "searchUrl": "https://kat.sx/search.php?q=%search%",
+    "baseUrl": "https://kat.sx/",
+    "requestType": "GET",
+    "listItemSelector": "#mainSearchTable>tbody>tr>td>div:eq(4)>table>tbody>",
+    "listItemSplice": [
+      1,
+      0
+    ],
+    "torrentSelector": {
+      "categoryTitle": "div.torrentname>div>span>span>strong>a",
+      "categoryUrl": {
+        "selector": "div.torrentname>div>span>span>strong>a",
+        "attr": "href"
+      },
+      "title": "div.torrentname>div>a",
+      "url": {
+        "selector": "div.torrentname>div>a",
+        "attr": "href"
+      },
+      "size": "td.nobr.center",
+      "downloadUrl": {
+        "selector": "div.torrentname>div>a",
+        "attr": "href"
+      },
+      "seed": "td.green.center",
+      "peer": "td.red.lasttd.center"
+    },
+    "onGetValue": {
+      "size": [
+        "convertSize"
+      ]
+    }
+  },
+  "uid": 1023267178
+};
+
+API_exKit(code);
