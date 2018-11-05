@@ -15,43 +15,37 @@ var code = {
   "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACdklEQVQ4T52TS0hUURjHf9+9juh0Z0wKkrKipKisqFWt2iZB0sJUKENBe6hFOD0oMnsZ2cOE8BEkWJbR6KbAyJXWIqhFgSkVYZGVVJTGveOo09x7Ym72sJX5weGcxXd+/P/f/xw50BlREVsxlYrXBSm+N6yylnn57vwfwqNBW28YKWw3VXa6b0qAYK+F5N0eVNnL/USiMM3QUf+4EYHhkA0yUWG8DsEeE8lu+6yyViTjSYhjd1EAb6IXw+9zu0OmhWVaNDRfxDKjEwgx/23PhpBNLQMqc+UMvtsK77R4vF7hcMlRbFtRdfkEiGCZCi2mQGAkFHF3jy7c6f6KZFzrVxuWz3QBsfIaCZzeexCUw6nG81SWHsHn9zNsWmiaxv6a4wx+CuOJ07jb8wVZ1/hKrU9P+Q1INLycK92NYzsca66nLnCU2GDK6k9SXVLB2HCYHWersEdH6Oj9iKxteKHWLUkhOh5jomFQvbMAHIdDN5u5sieAJhr5F87RtG8fiE5uRSXOWJj7zz8iqy51qzWLZ2M7Py0kGAa12/PAdgjcaqWpdBciwtaaOq7vLUY0jawT57HHRnj0cgBZUv1ErV405w/A5+dabgbYiu0dXdwo3OYOMqfuKsGSfBeWeaYWZzTM01cfkAVVj9XStFSccQXKUSROT3bV2HaU9rIC95zT0kZwy2bscIjM+laiIyGe971HZlc+VGkL5v4G/B22x5dEV9FGSJ4B34ZA11jf3IE1MICua/S9eYfMPP5Apc6bh/r3CRIbviLel+RG6pYIEct0bcTW+/5+JKm8U82avxD1q2mSf0pE49Pb14hR3qkcx57ktYltmqbzA5FrCScu5pDIAAAAAElFTkSuQmCC",
   "desc": "",
   "downloadUrl": "https://raw.githubusercontent.com/osokg36/tms/master/TorrentDownloads.txt",
-  "tVersion": "1.0.1",
+  "tVersion": "1.0.2",
   "search": {
     "loginUrl": "",
     "loginFormSelector": "",
-    "searchUrl": "http://www.torrentdownloads.me/search/?new=1&s_cat=0&search=%search%",
+    "searchUrl": "https://www.torrentdownloads.me/search/?new=1&s_cat=0&search=%search%",
     "nextPageSelector": {
       "selector": "div.pagination_box>ul>li:eq(1)>a",
       "attr": "href"
     },
-    "baseUrl": "http://www.torrentdownloads.me/",
+    "baseUrl": "https://www.torrentdownloads.me/",
     "requestType": "GET",
-    "listItemSelector": "div.bottom_left_curve>div>",
+    "listItemSelector": "div.left_container>div:eq(4)>div>div>div>div>div>div>",
     "listItemSplice": [
-      9,
+      3,
       0
     ],
     "torrentSelector": {
-      "title": "p>a",
+      "title": ">p>a",
       "url": {
-        "selector": "p>a",
+        "selector": ">p>a",
         "attr": "href"
       },
-      "size": "span:eq(3)",
+      "size": ">span:eq(3)",
       "downloadUrl": {
-        "selector": "span:eq(3)",
+        "selector": ">p>a",
         "attr": "href"
       },
-      "seed": "span:eq(2)",
-      "peer": "span:eq(1)"
+      "seed": ">span:eq(1)",
+      "peer": ">span:eq(2)"
     },
     "onGetValue": {
       "size": [
         "convertSize"
       ]
-    }
-  },
-  "uid": 625214228
-};
-
-API_exKit(code);
