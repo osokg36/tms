@@ -16,11 +16,11 @@ const code = {
   "description": {
     "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC3klEQVQ4T6WRTWhcZRSG33O+7965d4Yk09FRm9RoB1KLiYKtCIo7wT+kTZC4lIoL14JCqUpS0Z3Y1p0gFFyotGBtENSFFVyoBUGURgMWwU4n/zY/d+Z25rv3O0dmYopRd57t4Tznec8h/M+iv+ZpebJa4nhwoO2VxBspmaRZcZdbOAv5dnJPVIuG+/JyGJIPSReupEPn5tYIkB6gPokYZmSiUCy/qMaGqpL4TjrDWXIm9bxW7N/1sCmWj1AY7gORzVaXPw82V96qfvz7Qg/wFWDvHK+OFeLqKRsXD3gi1txflHb6NhW4EUSVIxwXn+EgrATIFq+vLh+na/Wz1ZnVZDsCFh9FCQO1wxz3vyHGDIF4Pned82x4yZTKhzgM7zPWtvNW83RzY+Xk+x/8Up/ejtC1UIDq47fXTNT3KoeFp4QoBrDAQXidCvGgsUGsuZvNOs1X0sb3X498hk537oZB7xYPIsZQ7QkqFI9yEN4NG1qyVsCG2ctK3to83Vz/4927Pr06v7XzH4CuRWNiaARR/zETFZ8Em5u6K9S5jrQ2f9YkfW2zsfjl6Czc9vd3GEwD/Nzh4f1BFB+DDR5T8RV1bUjactpuzXnXnvJL/ouRy1v6/zL48V6UBm7bNR5E8UviZZ9kjijPRCW3rHrNi/9Qmtk7e3/Ala7YDkDviA+hhiB6HcyPi/hAvdYJSMnwMIP6VOVX5/KjuuovbFvciDA/iKK7w4zbIHjTk+4m0Ubu5ZwAy9byBJQOGKa29/l7yXp+cuwSrnYteoAzgLl/DKPSb08UrH1AoORFvlMnJ5T8ItngecP8NIByyFp3HTfVSnB+dBbNHuCbPYhv2Y1DJgpfJiD2ikTyfEa9fOQTbBTK5hFY86xC91pmyn32Sbohp+65hKUeoJt/bj8qdgC3QkBGkYvD2vpPWDsI+N8Ook+Am8GIQgCOsXHhIpZeALIdb+yCjgM0tZWtd+W/FU3/R+9PLZ9OIHhkry4AAAAASUVORK5CYII=",
     "name": "1337",
-    "url": "https://",
+    "url": "https://1337x.to",
     "description": "1337x.to",
     "updateUrl": "update.ud",
     "downloadUrl": "https://raw.githubusercontent.com/osokg36/tms/master/1337x",
-    "version": "1.0.1"
+    "version": "1.3.1"
   },
   "search": {
     "url": "https://1337x.to/search/%search%/1/",
