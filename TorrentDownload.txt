@@ -4,7 +4,7 @@
 // @icon data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADmUlEQVQ4T02TS2wbRQCGZ2Znd2fX67fr2LGd2m6edfMipSEQVY2ExIETj0MrIYTEAYkbEtdy5coNJCSknnrgRq+o4iGIIKRNghKaxK6d+hHHib2xve+dnUVBRPDfv+/0fxD8Nzg19ZoSzSgT4XB0RQiG84DnZYYQAIwavqnXjVbziW3re+vr6yoAwL9A4b88XFq6E49mkm+FrqTeoIxF4WmbcKdtBem6DF1HwYzJUBT6Wir94Fziv/np0aMjAAD7RxDJL0RmrxfuJrNX33Fta4iwMBBOWlFpe2NWODlOQ5diiiCwQhHDff3NPzXM/9A+qX799PHj+oWAn1++vTYxu/iJY5sGJqJGiMDkSjkl7WzOCO32iE8pTzlMB6OZVn/l9h98PBlqVA6+axzXHsLJpTuJXDZ1PxSLTfjM7wZk2QuW97LB7SczpNeNYc/jAMbUEUWnlxlrdZZXN10OE+Y4XvOo8jnMTS68PL+8fN9jniGJxI7XDnPxnafTAbUbI4whEAwaajqnDiTFYbLY607fOBjaFBFRTB3sbj2AEzdeert0a+Vj07JaAYEH6Y1f5pLVSj5kWQQrinmcn1F/L77i9DABWXjelIJcY2hZUCByul7e/x5Ozi2+X7q5+oFuDJqSKLNoo5bOHOyNRy1T7qaL5kbxVW9HHgsalotHYPd4XOw/43xL50V5pHVU/g0WS3P3Zm+ufmiaw7YgEI/5SCHNdkGhlFSj4+K+cjWkupzCTB2G2KAzE1C3I9g644k8+qJ8+DPMXJtam7u1+inzWR8j3z51pFTLIuM+JwoaF1QMxgcYpVD0jGEaD5/npWGFh9QViJyq7O1+C0eLxbHi9MJnkVgizlxLret84dAIzrm8TADkOAh8KABvmBKMap5oZRE4DuR4iVKKq8/++uLiB/LU4srdqdLsu4w6Z/tdf6KmidcpEiTIcUDEQE9LbiUfsA4IdG2PcYJAxFin8WKj1Wp/dSGAo8VSLl/If5TMjJa2mtZks+ePeRALACFfxEDLKvQwF/YrIuZ8zIsRra92OvXGl7tbv25dtsAV5+evxWPZ93o4cW9oowSEzBQQ0HkEzBAB2pUQPxA4SPtnZzXt/Ozhebu+WavVrEvBRRJcujCTRXJ4LRoNL4TDwYRMRB4h5FPXdnVNVwfnvV3Ddn6smf0qKJft/9d4GTUCiURgMpYJMeYmXd+L+pyPEGOaz3Eng47bU9XnGgDAuwT+BihVsHcqTp74AAAAAElFTkSuQmCC
 // @downloadURL https://raw.githubusercontent.com/osokg36/tms/master/TorrentDownload.txt
 // @trackerURL https://www.torrentdownload.ch
-// @version 1.0.1
+// @version 1.3.1
 // @connect *://www.torrentdownload.ch
 // @require exKit
 // ==/UserScript==
@@ -18,7 +18,7 @@ const code = {
     "url": "https://www.torrentdownload.ch",
     "description": "TorrentDownload.ch",
     "downloadUrl": "https://raw.githubusercontent.com/osokg36/tms/master/TorrentDownload.txt",
-    "version": "1.0.1"
+    "version": "1.3.1"
   },
   "search": {
     "url": "https://www.torrentdownload.ch/search?q=xxx",
