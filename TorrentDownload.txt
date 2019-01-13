@@ -21,7 +21,7 @@ const code = {
     "version": "1.3.1"
   },
   "search": {
-    "url": "https://www.torrentdownload.ch/search?q=xxx",
+    "url": "https://www.torrentdownload.ch/search?q=%search%",
     "method": "GET",
     "query": "https://www.torrentdownload.ch/search?q=%search%"
   },
