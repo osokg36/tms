@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name Torrentz2.eu
+// @name Torrentz2
 // @description Torrentz2.eu is a free, fast and powerful meta-search engine combining results from dozens of search engines
 // @icon data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAByUlEQVQ4T72SPWgUURDH//Pe7iV3SU49cx5YWFlYCCpxG8HKUmzUViERA6IIQVKYIihYaReVgIoBLSwtbAyYQgsFm6u8iAhCIJiLyXlf2bt9u29G7gmaBIvVwunm6zcz//fo4Oj9Y33ZgXmJowEiEFKYCIQ8vxN3zBk6eulxi5M42+vrxTf3E8j5ApFtceeT53dpZPxBB9r7smUwS79IUoLAgQFE0F6ViMItddbuo+Dyk5ffV+vnkEHUS7IJKb9j9xGlcBvgEddA+qMwXW/Uv71WmZyb7mnlDw3lZ2n/6Ezx89zVNbfpT6NDFx4FnocZERu4AOkKs5ooPxxb2Fx34Py9wh9FO3xxLtCK7/4CKFVhUhPl2bFX2zX+jwDrTvjHDUhVIHRtfbX5Pl/Il0DG74Zq5dOzr7XUJ4hgiqNOizL9x9nSTpAptxrNF+kARIsCTFsT51jpCGJ3ad8/0e7yVEqAqggwaUz0IV5v19WgLvTlBm+Zrr2ZDvD7GRf2nrqRHS4VzyKW5bWa/y4dgJT7SNWVpbfF0p7TLOBajeeXn1/5CxHB04mxioSHw8S8aSJZqj6dDNNusGgV7vjQJ5k5EKChvczGRrsx/gMzjhJfGHEuCAAAAABJRU5ErkJggg==
 // @downloadURL https://raw.githubusercontent.com/osokg36/tms/master/Torrentz2.txt
@@ -12,9 +12,9 @@
 const code = {
   "version": 3,
   "type": "kit",
-  "description": " {
+  "description": {
     "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAByUlEQVQ4T72SPWgUURDH//Pe7iV3SU49cx5YWFlYCCpxG8HKUmzUViERA6IIQVKYIihYaReVgIoBLSwtbAyYQgsFm6u8iAhCIJiLyXlf2bt9u29G7gmaBIvVwunm6zcz//fo4Oj9Y33ZgXmJowEiEFKYCIQ8vxN3zBk6eulxi5M42+vrxTf3E8j5ApFtceeT53dpZPxBB9r7smUwS79IUoLAgQFE0F6ViMItddbuo+Dyk5ffV+vnkEHUS7IJKb9j9xGlcBvgEddA+qMwXW/Uv71WmZyb7mnlDw3lZ2n/6Ezx89zVNbfpT6NDFx4FnocZERu4AOkKs5ooPxxb2Fx34Py9wh9FO3xxLtCK7/4CKFVhUhPl2bFX2zX+jwDrTvjHDUhVIHRtfbX5Pl/Il0DG74Zq5dOzr7XUJ4hgiqNOizL9x9nSTpAptxrNF+kARIsCTFsT51jpCGJ3ad8/0e7yVEqAqggwaUz0IV5v19WgLvTlBm+Zrr2ZDvD7GRf2nrqRHS4VzyKW5bWa/y4dgJT7SNWVpbfF0p7TLOBajeeXn1/5CxHB04mxioSHw8S8aSJZqj6dDNNusGgV7vjQJ5k5EKChvczGRrsx/gMzjhJfGHEuCAAAAABJRU5ErkJggg==",
-    "name": "Torrentz2.eu",
+    "name": "Torrentz2",
     "url": "https://torrentz2.eu",
     "description":  "description": "Torrentz2.eu is a free, fast and powerful meta-search engine combining results from dozens of search engines",
     "downloadUrl": "https://raw.githubusercontent.com/osokg36/tms/master/Torrentz2.txt",
